@@ -1,9 +1,15 @@
 <template>
-  <Home/>
+  <Navbar/>
 </template>
 
 <script>
+import Vue from 'vue'
+import "assets/css/main.css";
+import PrimeVue from 'primevue/config';
+
+Vue.use(PrimeVue);
 export default {
-  name: 'IndexPage'
+  name: 'IndexPage',
+  components:"",
 }
 </script>

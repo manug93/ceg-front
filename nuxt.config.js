@@ -25,6 +25,7 @@ export default {
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
       'primeflex/primeflex.css',
+      '@/assets/css/fontawesome.css',
       '@/assets/css/main.css',
   ],
 
@@ -65,5 +66,11 @@ export default {
         },
       },
     },
-  }
+  },
+  primevue:{
+    theme: 'md-light-indigo',
+    ripple: true,
+    components: ['InputText','Button','DataTable','Dialog','Divider','Avatar','Dropdown','Badge'],
+    directives: ['Tooltip','BadgeDirective']
+  },
 }

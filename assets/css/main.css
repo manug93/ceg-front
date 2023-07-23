@@ -1,3 +1,55 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+body{
+    font-family: "MarkPro-Medium";
+}
+.red{
+    background-color: #BB3A5B !important;
+    color:white !important;
+}
+.dark-blue{
+    background-color: #002254 !important;
+    color:rgba(255,255,255,1) !important;
+}
+.blue{
+    background-color: #003B75 !important;
+    color:rgba(255,255,255,1) !important;
+}
+.text-yellow{
+    color: #FFC547 !important;
+}
+.text-white{
+    color:rgba(255,255,255,1) !important;
+}
+.banner{    
+    height: 40px;
+}
+.pointable:hover{
+    cursor: pointer;
+}
+
+input.p-inputtext-sm.overriden{
+    font-family: "MarkPro-Medium";
+    font-size: 0.75em;
+    color:white;
+    outline-color: none;
+}
+input.p-inputtext-sm.overriden:hover{
+    border-color: transparent;
+    outline-color: none;
+}
+input.p-inputtext-sm.overriden::-webkit-input-placeholder {
+    color: white; /*Change the placeholder color*/
+    opacity: 1; /*Change the opacity between 0 and 1*/
+}
+@font-face {
+    font-family: "MarkPro-Black";
+    src: url("../fonts/MarkPro-Black.otf");
+}
+@font-face {
+    font-family: "MarkPro-Medium";
+    src: url("../fonts/MarkPro-Medium.ttf");
+}
