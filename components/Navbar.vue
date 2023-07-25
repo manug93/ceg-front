@@ -10,6 +10,14 @@
             <span class="ml-4 pointable" ><i class="fa  fa-user-circle" style="font-size: 1.5rem"></i></span>
             <span class="ml-4 pointable" ><i class="fa  fa-shopping-cart  mr-4" style="font-size: 1.5rem" v-BadgeDirective="2"></i></span>
         </div>
+        <div>
+            <Carousel :value="items" :numVisible="1" :numScroll="1" orientation="horizontal"  :responsiveOptions="responsiveOptions">
+                <template #item="slotProps">
+                    <img src="../assets/img/wine1.jpg" >
+                    Content {{slotProps.data.name}}
+                </template>  
+            </Carousel>
+        </div> 
     </div>
 </template>
 <script>
@@ -19,8 +27,42 @@
     export default{
         data(){
             return{
-                needle:""
+                needle:"",
+                items:[
+                    {
+                        name:"Manug",
+                        Description:"Description"
+                    },
+                    {
+                        name:"Manej",
+                        Description:"Description"
+                    },
+                    {
+                        name:"Naug",
+                        Description:"Description"
+                    }
+                ],
+                responsiveOptions: [
+                    {
+                        breakpoint: '1024px',
+                        numVisible: 3,
+                        numScroll: 3
+                    },
+                    {
+                        breakpoint: '600px',
+                        numVisible: 2,
+                        numScroll: 2
+                    },
+                    {
+                        breakpoint: '480px',
+                        numVisible: 1,
+                        numScroll: 1
+                    }
+                ]
             }
         }
     }
 </script>
+<style>
+ 
+</style>

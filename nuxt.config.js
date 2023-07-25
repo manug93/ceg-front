@@ -70,7 +70,7 @@ export default {
   primevue:{
     theme: 'md-light-indigo',
     ripple: true,
-    components: ['InputText','Button','DataTable','Dialog','Divider','Avatar','Dropdown','Badge'],
+    components: ['InputText','Button','Carousel','DataTable','Dialog','Divider','Avatar','Dropdown','Badge'],
     directives: ['Tooltip','BadgeDirective']
   },
 }
