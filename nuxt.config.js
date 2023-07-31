@@ -1,3 +1,4 @@
+import messages from "./store/menus"
 export default {
   // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
   ssr: false,
@@ -46,6 +47,7 @@ export default {
     'primevue/nuxt',
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
+    '@nuxtjs/i18n',
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
@@ -66,6 +68,14 @@ export default {
         },
       },
     },
+  },
+  i18n: {
+    locales: ['en', 'fr'],
+    defaultLocale: 'fr',
+    vueI18n: {
+      fallbackLocale: 'fr',
+      messages
+    }
   },
   primevue:{
     theme: 'md-light-indigo',

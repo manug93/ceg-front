@@ -1,10 +1,7 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-
 body{
     font-family: "MarkPro-Medium";
+    padding:0;
+    margin:0;
 }
 .red{
     background-color: #BB3A5B !important;
@@ -44,6 +41,23 @@ input.p-inputtext-sm.overriden:hover{
 input.p-inputtext-sm.overriden::-webkit-input-placeholder {
     color: white; /*Change the placeholder color*/
     opacity: 1; /*Change the opacity between 0 and 1*/
+}
+
+.menu{
+
+}
+.submenu{
+    display: none;
+    position: absolute;
+}
+.submenu-list{
+    list-style-type: none;
+}
+.menu-item:hover{
+    color:#FFC547;
+}
+.menu-item:hover .submenu{
+    display: block;
 }
 @font-face {
     font-family: "MarkPro-Black";

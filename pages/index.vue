@@ -12,4 +12,8 @@ export default {
   name: 'IndexPage',
   components:"",
 }
+/*export default {
+  
+
+}*/
 </script>
