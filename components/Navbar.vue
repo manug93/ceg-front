@@ -36,7 +36,7 @@
                 <div class="menu-item pointable text-center mx-3 my-2">{{$t("menu.champagne")}} <i class="fa fa-caret-down"></i>
                     <div class="submenu dark-blue">                        
                         <ul class="submenu-list">
-                            <li class="submenu-item text-justify px-3 py-1">Bio</li>
+                            <li class="submenu-item text-justify px-3 py-1"><nuxt-link to="/about">Bio</nuxt-link></li>
                             <li class="submenu-item text-justify px-3 py-1">Brut</li>
                             <li class="submenu-item text-justify px-3 py-1">Brut Millésimé</li>
                             <li class="submenu-item text-justify px-3 py-1">Brut Nature</li>
