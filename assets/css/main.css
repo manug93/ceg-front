@@ -63,6 +63,10 @@ input.p-inputtext-sm.overriden::-webkit-input-placeholder {
 .menu-item:hover .submenu{
     display: block;
 }
+
+.carousel > .p-carousel img{
+    max-height:400px;
+}
 @font-face {
     font-family: "MarkPro-Black";
     src: url("../fonts/MarkPro-Black.otf");
