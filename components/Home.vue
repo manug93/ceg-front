@@ -1,7 +1,7 @@
 <template>
     <div>
         <Navbar></Navbar>
-        <div class="carousel" style="max-height:400px">
+        <div class="carousel mb-5" style="max-height:400px">
             <Carousel :value="items" :numVisible="1" :numScroll="1" orientation="horizontal"  :responsiveOptions="responsiveOptions">
                 <template #item="slotProps">
                     <img src="../assets/img/wine1.jpg" >
@@ -11,7 +11,7 @@
         </div>
         <div class="red">
             <div class="flex align-items-center justify-content-center ">
-                <p class="font-bold text-3xl">Selection de vins</p>
+                <p class="font-bold text-3xl mb-0">Selection de vins</p>
                 
             </div>
             <div class="flex align-items-center justify-content-center ">

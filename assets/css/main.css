@@ -64,6 +64,9 @@ input.p-inputtext-sm.overriden::-webkit-input-placeholder {
     display: block;
 }
 
+.carousel {
+    
+}
 .carousel > .p-carousel img{
     max-height:400px;
 }
