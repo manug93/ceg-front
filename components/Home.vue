@@ -120,12 +120,7 @@
                 <p>Les meilleurs spiritueux : whiskies, Vodkas, Gins, Cognacs, Rhums, Liqueurs, Eaux-de-vie sont disponibles sur Lilovino.com. Simple amateur ou connaisseur, partez à la découverte de nouvelles saveurs aux 4 coins du monde. Notre catalogue dispose d'un grand nombre de marques et distilleries internationales de whiskies et spiritueux.</p>
             </div>
         </div>
-        <div class="flex align-items-center yellow">
-        <div></div>
-        <div></div>
-       </div> 
-       <div class="flex align-items-center justify-content-center banner alabaster"><span>&copy ceg-sarl 2023</span></div>
-        
+        <Footer></Footer>
     </div>
     
 </template>
@@ -214,4 +209,5 @@
         transform: scale(2);
         transition: .5s ease-in-out;
     }
+    
 </style>
