@@ -1,6 +1,47 @@
 <template>
     <div>
         <Navbar></Navbar>
+        <div class="grid main">
+            <div class="sidebar col-3">
+                <div>
+                    <ul class="search-criterias"> <span class="inline-block my-3">Type de vin</span> 
+                        <li class="my-2 p-1 text-sm flex text-ebony justify-content-between"><span class="">Rouge</span> <span class="">234</span></li>
+                        <li class="my-2 p-1 text-sm flex text-ebony justify-content-between"><span class="">Blanc</span> <span class="">45</span></li>
+                        <li class="my-2 p-1 text-sm flex text-ebony justify-content-between"><span class="">Effervescent</span> <span class="">909</span></li>
+                        <li class="my-2 p-1 text-sm flex text-ebony justify-content-between"><span class="">Rosé</span> <span class="">78</span></li>
+                    </ul>
+                </div>
+                <div>
+                    <ul class="search-criterias"> <span class="inline-block my-3">Region</span> 
+                        <li class="my-2 p-1 text-sm flex text-ebony justify-content-between"><span class="">Alsace</span> <span class="">877</span></li>
+                        <li class="my-2 p-1 text-sm flex text-ebony justify-content-between"><span class="">Beaujolais</span> <span class="">456</span></li>
+                        <li class="my-2 p-1 text-sm flex text-ebony justify-content-between"><span class="">Bordeaux</span> <span class="">91</span></li>
+                        <li class="my-2 p-1 text-sm flex text-ebony justify-content-between"><span class="">Bourgogne</span> <span class="">67</span></li>
+                        <li class="my-2 p-1 text-sm flex text-ebony justify-content-between"><span class="">Champagne</span> <span class="">78</span></li>
+                        <li class="my-2 p-1 text-sm flex text-ebony justify-content-between"><span class="">Corse</span> <span class="">345</span></li>
+                        <li class="my-2 p-1 text-sm flex text-ebony justify-content-between"><span class="">Jura</span> <span class="">12</span></li>
+                        <li class="my-2 p-1 text-sm flex text-ebony justify-content-between"><span class="">Languedoc-Roussillon</span> <span class="">2</span></li>
+                    </ul>
+                </div>
+                <div>
+                    <ul class="search-criterias"> <span class="inline-block my-3">Millésime</span> 
+                        <li class="my-2 p-1 text-sm flex text-ebony justify-content-between"><span class="">2021</span> <span class="">234</span></li>
+                        <li class="my-2 p-1 text-sm flex text-ebony justify-content-between"><span class="">2020</span> <span class="">45</span></li>
+                        <li class="my-2 p-1 text-sm flex text-ebony justify-content-between"><span class="">2019</span> <span class="">909</span></li>
+                        <li class="my-2 p-1 text-sm flex text-ebony justify-content-between"><span class="">2018</span> <span class="">78</span></li>
+                    </ul>
+                </div>
+                <div>
+                    <ul class="search-criterias"> <span class="inline-block my-3">Type de vin</span> 
+                        <li class="my-2 p-1 text-sm flex text-ebony justify-content-between"><span class="">Rouge</span> <span class="">234</span></li>
+                        <li class="my-2 p-1 text-sm flex text-ebony justify-content-between"><span class="">Blanc</span> <span class="">45</span></li>
+                        <li class="my-2 p-1 text-sm flex text-ebony justify-content-between"><span class="">Effervescent</span> <span class="">909</span></li>
+                        <li class="my-2 p-1 text-sm flex text-ebony justify-content-between"><span class="">Rosé</span> <span class="">78</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-8"></div>
+        </div>
         <Footer></Footer>
     </div>
 
@@ -11,4 +52,23 @@ export default{
 }
 </script>
 <style>
+    .sidebar{
+        border-right: solid 1px #c1c1C199;
+        max-height:calc(100vh);
+        overflow: scroll;
+    }
+    .search-criterias{
+        list-style-type: none;
+    }
+    .search-criterias li{
+        border-radius:5px;
+    }
+
+    .search-criterias li span{
+        display: inline-block;
+    }
+    .search-criterias li:hover{
+        background-color: var(--yellow-color);
+        cursor:pointer;
+    }
 </style>

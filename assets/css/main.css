@@ -17,11 +17,11 @@ body{
     color:rgba(255,255,255,1) !important;
 }
 .khaki{
-    background-color: #f0e68c !important;
+    background-color: var(--khaki-color) !important;
     color:rgba(255,255,255,1) !important;
 }
 .darkslateblue{
-    background-color: #2f4f4f !important;
+    background-color: var(--darkslateblue-color) !important;
     color:rgba(255,255,255,1) !important;
 }
 
@@ -30,34 +30,40 @@ body{
 }
 
 .yellow{
-    background-color: #FFC547 !important;
+    background-color: var(--yellow-color) !important;
     color: #fff !important;
 }
 
 .gray{
-    background-color: #69675B !important;
+    background-color: var(--gray-color) !important;
     color: #fff !important;
 }
 .darky{
-    background-color: rgb(64, 56, 26) !important;
-    color: #fff !important;
+    background-color: var(--darky-color) !important;
+    color: white !important;
 }
 .ebony{
-    background-color: rgb(92, 94, 67) !important;
-    color: #fff !important;
+    background-color: var(--ebony-color) !important;
+    color: white !important;
 }
 .blue{
-    background-color: #003B75 !important;
-    color:rgba(255,255,255,1) !important;
+    background-color: var(--blue-color) !important;
+    color:white !important;
 }
 .text-yellow{
-    color: #FFC547 !important;
+    color: var(--yellow-color) !important;
+}
+.text-ebony{
+    color: var(--ebony-color) !important;
 }
 .text-white{
-    color:rgba(255,255,255,1) !important;
+    color:white !important;
 }
 .banner{    
     height: 40px;
+}
+.main{
+    padding-top:150px ;
 }
 .pointable:hover{
     cursor: pointer;
@@ -96,10 +102,10 @@ a{
     padding:0;
 }
 .submenu-item:hover{
-    color:#FFC547;
+    color:var(--yellow-color);
 }
 .menu-item:hover{
-    color:#FFC547;
+    color:var(--yellow-color);
 }
 .menu-item:hover .submenu{
     display: block;
@@ -138,4 +144,17 @@ a{
 @font-face {
     font-family: "MarkPro-Medium";
     src: url("../fonts/MarkPro-Medium.ttf");
+}
+
+
+:root{
+    --yellow-color: #FFC547;
+    --darkslateblue-color:#2f4f4f;
+    --khaki-color:#f0e68c;
+    --blue-color:#003B75;
+    --darky-color: rgb(64, 56, 26);
+    --ebony-color: rgb(92, 94, 67);
+    --gray-color:#69675B;
+    --red-color:#BB3A5B;
+    --dark-blue-color:#002254;
 }

@@ -9,7 +9,7 @@
                 </template>  
             </Carousel>
         </div-->
-        <div>                        
+        <div class="main">                        
             <div class="grid grid-nogutter surface-section text-800">
                 <div class="col-12 md:col-6 p-6 text-center md:text-left flex align-items-center ">
                     <section>
@@ -199,7 +199,7 @@
         padding:3rem;
     }
     .folio a:hover{
-        color: #FFC547;
+        color: var(--yellow-color);
     }
     .folio .p-card .p-card-title{
         min-height:100px;
