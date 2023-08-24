@@ -1,6 +1,6 @@
 <template>
     <div>
-        <Navbar></Navbar>
+        <Searchbar></Searchbar>
         <div class="grid main">
             <div class="sidebar col-3">
                 <div>
@@ -40,7 +40,9 @@
                     </ul>
                 </div>
             </div>
-            <div class="col-8"></div>
+            <div class="col-8">
+
+            </div>
         </div>
         <Footer></Footer>
     </div>
