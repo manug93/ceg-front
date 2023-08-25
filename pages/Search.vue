@@ -40,8 +40,23 @@
                     </ul>
                 </div>
             </div>
-            <div class="col-8">
-
+            <div class="col-9 flex flex-wrap  products">
+                <div v-for="wine in getWines" :key="wine.id" class="w-3 px-1 my-3">
+                    <Card class="py-3 text-center pointable">
+                        <template #header>
+                            <img alt="user header" :src="wine.image_link" class="h-8rem w-auto">
+                        </template>
+                        <template #title>
+                            <span class="text-sm">{{wine.title}}</span>
+                        </template>
+                        <template #content>
+                            <span class="text-sm">{{wine.millesime}}</span>
+                        </template>
+                        <template #footer>
+                            <Button icon="pi pi-shopping-cart" class="darky" label="Ajouter" />
+                        </template>
+                    </Card>
+                </div>
             </div>
         </div>
         <Footer></Footer>
@@ -49,8 +64,20 @@
 
 </template>
 <script>
+
+import wines from "../store/wines";
 export default{
-    name:"Search"
+    name:"Search",
+    data(){
+        return {
+
+        }
+    },    
+    computed:{
+            getWines(){
+                return wines;
+            }
+        }
 }
 </script>
 <style>
@@ -72,5 +99,19 @@ export default{
     .search-criterias li:hover{
         background-color: var(--yellow-color);
         cursor:pointer;
+    }
+    .main{
+         padding-top:190px ;
+    }
+    .products .p-card-header{
+        display:flex;
+        justify-content: center;
+    }
+    .products .p-card-title{
+        min-height: 60px;
+        text-align: center;
+    }
+    .products  .p-card:hover{
+        background-color: var(--khaki-light-color);
     }
 </style>
