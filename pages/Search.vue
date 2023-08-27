@@ -2,7 +2,7 @@
     <div>
         <Searchbar></Searchbar>
         <div class="grid main">
-            <div class="sidebar col-3">
+            <div class="sidebar lg:col-3 sm:col-5">
                 <div>
                     <ul class="search-criterias"> <span class="inline-block my-3">Type de vin</span> 
                         <li class="my-2 p-1 text-sm flex text-ebony justify-content-between"><span class="">Rouge</span> <span class="">234</span></li>
@@ -40,18 +40,18 @@
                     </ul>
                 </div>
             </div>
-            <div class="col-9 flex flex-wrap  products">
-                <div v-for="wine in getWines" :key="wine.id" class="w-3 px-1 my-3">
-                    <Card class="py-3 text-center pointable">
+            <div class="lg:col-9 sm:col-7 flex flex-wrap justify-content-around products">
+                <div v-for="wine in getWines" :key="wine.id" class="lg:w-14rem sm:w-10rem px-1 my-3">
+                    <Card class="py-2 text-center pointable">
                         <template #header>
-                            <img alt="user header" :src="wine.image_link" class="h-8rem w-auto">
+                            <div class="p-3 bg-white w-11 border-round-lg"><img alt="user header" :src="wine.image_link" class="lg:h-8rem sm:h-5rem w-auto"></div>
                         </template>
                         <template #title>
                             <span class="text-sm">{{wine.title}}</span>
                         </template>
-                        <template #content>
+                        <!--template #content>
                             <span class="text-sm">{{wine.millesime}}</span>
-                        </template>
+                        </template-->
                         <template #footer>
                             <Button icon="pi pi-shopping-cart" class="darky" label="Ajouter" />
                         </template>
@@ -80,7 +80,7 @@ export default{
         }
 }
 </script>
-<style>
+<style scoped>
     .sidebar{
         border-right: solid 1px #c1c1C199;
         max-height:calc(100vh);
@@ -100,18 +100,15 @@ export default{
         background-color: var(--yellow-color);
         cursor:pointer;
     }
-    .main{
-         padding-top:190px ;
-    }
-    .products .p-card-header{
-        display:flex;
-        justify-content: center;
-    }
-    .products .p-card-title{
-        min-height: 60px;
-        text-align: center;
+    
+    
+    .products .p-card-content{
+        padding: 0;
     }
     .products  .p-card:hover{
         background-color: var(--khaki-light-color);
+    }
+    .bg-white{
+        background-color: white;
     }
 </style>

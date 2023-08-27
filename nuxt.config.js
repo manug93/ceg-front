@@ -78,9 +78,9 @@ export default {
     }
   },
   primevue:{
-    theme: 'md-light-indigo',
+    theme: 'lara-light-indigo',
     ripple: true,
-    components: ['InputText','Button','Carousel','DataTable','Dialog','Divider','Avatar','Dropdown','Badge','Card'],
+    components: ['InputText','Button','Carousel','DataTable','Steps','Dialog','DataTable','Column','Divider','Avatar','Dropdown','Badge','AutoComplete','Card','Menu','Chip','Tag','ColumnGroup','Row','Panel'],
     directives: ['Tooltip','BadgeDirective']
   },
 }

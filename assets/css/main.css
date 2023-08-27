@@ -4,6 +4,9 @@ body{
     margin:0;
     overflow-x: hidden;
 }
+.default-font{
+    font-family: "MarkPro-Medium" !important;
+}
 .red{
     background-color: #BB3A5B !important;
     color:white !important;
@@ -63,7 +66,7 @@ body{
     height: 40px;
 }
 .main{
-    padding-top:150px ;
+    padding-top:165px ;
 }
 .pointable:hover{
     cursor: pointer;
@@ -119,6 +122,60 @@ a{
 }
 
 
+/******************************************************************/
+/**************************STEPS OVERRIDE**************************/
+/******************************************************************/
+
+.formNavigtor .p-steps .p-steps-title,.formNavigtor .p-steps .p-steps-number{
+    font-family: var(--markpro-md-font);
+}
+
+/******************************************************************/
+/**************************PANEL OVERRIDE**************************/
+/******************************************************************/
+
+/*.cgu .p-panel-header{
+    background: var(--red-color) !important;
+    color: white !important;
+}
+.cgu .p-panel-icons button{
+    color: white !important;
+}
+.cgu .p-panel-icons button:hover{
+    color: var(--yellow-color) !important;
+}*/
+
+
+/******************************************************************/
+/************************DATATABLE OVERRIDE************************/
+/******************************************************************/
+.details-table .p-datatable-thead{
+    display: none;
+}
+.details-table .p-datatable-tbody{
+    font-family: var(--markpro-md-font);
+}
+
+
+/******************************************************************/
+/**************************CARDS OVERRIDE**************************/
+/******************************************************************/
+
+.products .p-card-header{
+    display:flex;
+    justify-content: center;
+}
+
+
+.products .p-card-title{
+    min-height: 60px;
+    text-align: center;
+}
+
+/******************************************************************/
+/************************SCROLLBAR OVERRIDE************************/
+/******************************************************************/
+
 ::-webkit-scrollbar {
     width: 5px;
   }
@@ -137,6 +194,10 @@ a{
   ::-webkit-scrollbar-thumb:hover {
     background: #555;
   }
+
+/******************************************************************/
+/**************************FONTS OVERRIDE**************************/
+/******************************************************************/
 @font-face {
     font-family: "MarkPro-Black";
     src: url("../fonts/MarkPro-Black.otf");
@@ -147,6 +208,9 @@ a{
 }
 
 
+/******************************************************************/
+/**************************COLORS OVERRIDE*************************/
+/******************************************************************/
 :root{
     --yellow-color: #FFC547;
     --darkslateblue-color:#2f4f4f;
@@ -158,4 +222,5 @@ a{
     --gray-color:#69675B;
     --red-color:#BB3A5B;
     --dark-blue-color:#002254;
+    --markpro-md-font:"MarkPro-Medium";
 }

@@ -4,11 +4,12 @@
             <div class="flex align-items-center justify-content-center banner alabaster"><span>Publicité</span></div>
             <div class="flex full-header align-items-center justify-content-center darky">
                 <span class="p-input-icon-right my-5">
-                    <i class="pi pi-search text-white pointable" />
+                    <i class="pi pi-search text-white pointable" @click="search"/>
                     <InputText v-model="needle" placeholder="Search" class="p-inputtext-sm overriden text-white py-2 ebony" ></InputText>                
                 </span>
                 <span class="ml-4 text-yellow">Service Client : </span><span class="ml-3">699 888 999</span>
-                <span class="ml-4 pointable" ><i class="fa  fa-user-circle" style="font-size: 1.5rem"></i></span>
+                <span class="ml-4 pointable" @click="toggle"><i class="fa  fa-user-circle" style="font-size: 1.5rem"></i></span>
+                <Menu ref="menu" :popup="true" :model="items" />
                 <span class="ml-4 pointable" ><i class="fa  fa-shopping-cart  mr-4" style="font-size: 1.5rem" v-BadgeDirective="2"></i></span>
                 <span class="ml-3 pointable flex align-items-center" ><a href=""><img class="w-1rem mr-1" src="../assets/img/fr.svg"></a></span>
                 <span class="ml-3 pointable flex align-items-center" ><a href=""><img class="w-1rem mr-1" src="../assets/img/en.svg"></a></span>
@@ -64,10 +65,34 @@
     import Vue from "vue";
     import { BadgeDirective as badged }  from 'primevue/badgedirective';
     Vue.directive(badged);    
+    const items = [
+        {
+            label: 'Settings',
+            icon: 'pi pi-cog',
+            to: '/fileupload'
+        },
+        {
+            label: 'Disconnect',
+            icon: 'pi pi-sign-out',
+            url: 'https://www.primefaces.org/primevue'
+        }
+    ];
     export default{
         data(){
             return{
                 needle:"",
+                items: [
+                    {
+                        label: 'Settings',
+                        icon: 'pi pi-cog',
+                        to: '/settings'
+                    },
+                    {
+                        label: 'Disconnect',
+                        icon: 'pi pi-sign-out',
+                        url: '/logout'
+                    }
+                ]
                 
             }
         },
@@ -80,6 +105,12 @@
         methods: {
             handleScroll (event) {
                 console.log(event.target.body.scrollTop)
+            },
+            toggle(event) {
+                this.$refs.menu.toggle(event);
+            },
+            search(){
+                this.$router.push("/search?q="+this.needle);
             }
         }
     }
@@ -88,6 +119,22 @@
  .navbar{
     position: relative;
     z-index: 1000;
+ }
+ .navbar .p-menuitem-link{
+    padding :0.5rem;
+    font-size: 1rem;
+    font-family: "MarkPro-Medium";
+    color: var(--yellow-color);
+ }
+ .navbar .p-menu .p-menuitem-link .p-menuitem-text,.navbar .p-menu .p-menuitem-link .p-menuitem-icon{
+    color: white;
+    font-size: 0.8rem;
+ }
+ .navbar .p-menu .p-menuitem-link:hover> .p-menuitem-text,.navbar .p-menu .p-menuitem-link:hover> .p-menuitem-icon{
+    color: var(--yellow-color);
+ }
+ .navbar .p-menu{
+    background-color: var(--darky-color);
  }
  .navbar-container{
  }
